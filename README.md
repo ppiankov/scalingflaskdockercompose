@@ -19,6 +19,7 @@ Clone this repository to your local machine:
 
 
 git clone https://github.com/ppiankov/scalingflaskdockercompose
+
 cd scalingflaskdockercompose
 
 ## 2. Start the Application
@@ -53,5 +54,8 @@ Targets: http://localhost:9090/targets
 Grafana Dashboard:
 
 Dashboard: http://localhost:3000/d/_eX4mpl3/flask-dashboard
-Documentation
-For more detailed information about the configuration and components used in this project, refer to the individual configuration files and script comments within the repository.
+
+## Documentation
+
+For more detailed information about the configuration and components used in this project, 
+refer to the individual configuration files and script comments within the repository.

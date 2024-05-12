@@ -44,16 +44,13 @@ Replace localhost with your server's IP address if accessing from a different ma
 ## 5. Monitoring and Metrics
 Access the following endpoints to monitor the application and view metrics:
 
-Flask Application Endpoint:
+Flask Application Endpoint: http://localhost:5000/status
 
-Working location: http://localhost:5000/status
 Metrics: http://localhost:5000/metrics
-Prometheus:
 
-Targets: http://localhost:9090/targets
-Grafana Dashboard:
+Prometheus targets: http://localhost:9090/targets
 
-Dashboard: http://localhost:3000/d/_eX4mpl3/flask-dashboard
+Grafana Dashboard: http://localhost:3000/d/_eX4mpl3/flask-dashboard
 
 ## Documentation
 

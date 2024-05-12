@@ -1,0 +1,20 @@
+FROM python:3.9-slim
+
+# Set the working directory
+WORKDIR /app
+
+# Copy the script
+COPY scaling_script.py /app/scaling_script.py
+COPY docker-compose.yaml /app/docker-compose.yaml
+
+# Install any required packages
+RUN pip install requests
+
+# Setup the cron job
+RUN echo "* * * * * root /usr/local/bin/python /app/scaling_script.py >> /var/log/cron.log 2>&1" > /etc/cron.d/scale-cron
+RUN chmod 0644 /etc/cron.d/scale-cron
+RUN touch /var/log/cron.log
+RUN apt-get update && apt-get -y install cron curl docker.io docker-compose
+
+# Run the cron job
+CMD cron && tail -f /var/log/cron.log
